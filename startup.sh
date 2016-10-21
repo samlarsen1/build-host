@@ -1,3 +1,6 @@
+
+export DEBIAN_FRONTEND=noninteractive
+
 echo "Running startup shell"
 sudo apt-get update  > /dev/null
 
@@ -13,6 +16,7 @@ sudo apt-get update  > /dev/null
 sudo apt-get purge lxc-docker  > /dev/null
 # Install extra kernel packages
 echo " - installing extra kernel packages"
+sudo apt-get install -y linux-headers-$(uname -r) > /dev/null
 sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual  > /dev/null
 # Install docker
 echo " - installing docker"
@@ -26,6 +30,8 @@ sudo groupadd docker
 sudo usermod -aG docker vagrant
 sudo systemctl enable docker
 
+echo "Installing Ansible"
+sudo apt-get install -y ansible  > /dev/null
 
 echo "Installing NPM"
 sudo apt-get install -y npm  > /dev/null
