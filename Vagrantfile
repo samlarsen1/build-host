@@ -24,12 +24,15 @@ Vagrant.configure(2) do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
   config.vm.network "forwarded_port", guest: 80, host: 8080
+  #config.vm.network "forwarded_port", guest: 81, host: 8081
+  #config.vm.network "forwarded_port", guest: 82, host: 8082
+  #config.vm.network "forwarded_port", guest: 83, host: 8083
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network "private_network", ip: "192.168.33.10"
 
-  # Create a public network, which generally matched to bridged network.
+  # Create a public network, whiach generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
   # your network.
   # config.vm.network "public_network"
@@ -39,6 +42,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder ".", "/source_files"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -53,7 +57,7 @@ Vagrant.configure(2) do |config|
   # end
   
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "4096"
+    vb.memory = "2048"
   end
 
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies

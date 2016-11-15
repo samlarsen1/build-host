@@ -33,10 +33,10 @@ sudo systemctl enable docker
 echo "Installing Ansible"
 sudo apt-get install -y ansible  > /dev/null
 
-echo "Installing NPM"
-sudo apt-get install -y npm  > /dev/null
+#echo "Installing NPM"
+#sudo apt-get install -y npm  > /dev/null
 
-echo "Installing htop"
-sudo apt-get install -y htop
+#echo "Installing htop"
+#sudo apt-get install -y htop
 
 echo "Complete"
