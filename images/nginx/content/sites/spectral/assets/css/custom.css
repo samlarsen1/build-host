@@ -36,3 +36,30 @@ body.is-mobile.landing .wrapper.style4 {
 body.is-mobile.landing #footer {
 	background-color: #1d242a;
 }
+
+.icon.major.hlist {
+	-moz-transform: initial;
+	-webkit-transform: initial;
+	-ms-transform: initial;
+	transform: initial;
+	border: none;
+	display: inline-block;
+	font-size: 1.5em;
+	height: calc(3em + 2px);
+	line-height: 3em;
+	text-align: center;
+	width: calc(4.2em + 2px);	
+}
+
+.icon.major.hlist:before {
+	-moz-transform: initial;
+	-webkit-transform: initial;
+	-ms-transform: initial;
+	transform: initial;
+}
+
+.icon.major.hlist .icon-label {
+	font-size: 1em;
+	height: calc(1.2em);
+	line-height: 1.2em;
+}
